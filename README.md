@@ -17,7 +17,7 @@ In this lab, you will do the following:
     1. Through the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mongodb.mongodb_atlas_self_serve_prod_2022?ocid=mongodb_iotmanufacturing_blog_FY23) if you have an Azure account. Refer to the [documentation](https://www.mongodb.com/docs/atlas/billing/azure-self-serve-marketplace/) to set up your subscription.
     2. With the [Atlas registration page](https://account.mongodb.com/account/register)
    
- ## Create an Atlas project and cluster
+## Create an Atlas project and cluster
  In this section, you will get up and running, spinning up your first cluster and database.
 
 ### Provision a free cluster
@@ -129,6 +129,55 @@ img12
   img15
   
   Nice! You now have your Atlas database set up with some cake data and even a comment associated with the cake!
+
+
+## Configure a GraphQL API with Atlas App Services
+In this section, we will create our first Atlas App Services application, set some rules for accessing our collections, and then configure a schema for our data, allowing us to enable GraphQL.
+
+### Create an Atlas App Services application
+
+In this section, we will set up our first Atlas App Services application, ready for using GraphQL.
+
+  1. Start by navigating to the **App Services Tab.**
+
+img16
+
+  2. You’ll be prompted to select a starter template. Let’s go with the **Build your own App** option that’s already selected. Click the **Next** button. 
+ 
+img17
+
+  3. Next, you need to configure your application.  
+    a. **Data Source:** Since we have created a single cluster, Atlas has already linked it to our application.  
+    b. **Application Name:** Let’s give our application a meaningful name, such as **Bakery,** and click **Save.**  
+    c. **App Deployment Model:** Change the deployment to **Single Region** and select the region closest to your cluster’s location. Click on the **tick mark** to confirm.
+    
+img18
+
+  4. Click the Create App Service button to create your first App Services application!
+
+### Configure rules  
+We want to add some rules to control our app’s access to our data. We don’t need everything to be able to read and write. So, we will configure those rules in this section.  
+  1. At the end of the previous section, after creating your application, it will take you to it in your browser. On the left, under the **Data Access** heading, select **Rules.** 
+
+img19
+
+  2.  We will need to make two rules—one for each of our collections.  
+     a. Select the cakes collection, select the readAll preset, and then click Add preset role.  
+     b. A popup will appear talking about Save and Deploy. You can just click through this and leave it as it is.  
+  3. Select the **comments** collection from the left, and this time, apply the **readAndWriteAll** rule.  
+  4. Since we have made changes to the app by adding these rules, we need to deploy those changes. This Review Draft & Deploy step is on by default to protect us from making changes unintentionally.  
+     a. Click the **Review Draft & Deploy** button in the blue banner across the top of your screen.  
+     b. This will show the rules we have applied, as the system added them to a new rules.json file. Simply scroll down to the bottom of the window and click **Deploy.**
+
+
+
+
+
+
+
+
+
+
 
 
 
