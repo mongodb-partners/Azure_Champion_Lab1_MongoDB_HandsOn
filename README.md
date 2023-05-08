@@ -168,6 +168,54 @@ img19
   4. Since we have made changes to the app by adding these rules, we need to deploy those changes. This Review Draft & Deploy step is on by default to protect us from making changes unintentionally.  
      a. Click the **Review Draft & Deploy** button in the blue banner across the top of your screen.  
      b. This will show the rules we have applied, as the system added them to a new rules.json file. Simply scroll down to the bottom of the window and click **Deploy.**
+     
+### Generate a schema
+
+GraphQL requires a schema to be defined for building up queries, so in this section, we will generate a schema for both our cakes and comments collections.  
+  1. Click **Schema** on the left, just below where you clicked **Rules** in Step 1 of the last section.  
+  2. Select the **Cakes** collection. App Services will see that you already have data from which it can generate a schema, so click **Define a Schema.**    
+  3. Leave the default sample size and click **Generate schema from sampling.**  
+  4. A JSON schema will be generated, matching the field names to their data types. At the top of the browser window, click **Save Draft** to save this new schema.  
+  5. We now want to generate a schema for our comments collection. Click **Define a Schema**. Then click **or skip and manually define your own schema.** This time, write the schema instead of generating it.
+
+img20
+
+  6. Paste the following JSON schema into the box and click **Save Draft.** You my see a warning message which can be ignored and accepted.  
+```
+{
+  "title": "comment",
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "cakeId": {
+      "bsonType": "objectId"
+    },
+    "date": {
+      "bsonType": "date"
+    },
+    "name": {
+      "bsonType": "string"
+    },
+    "text": {
+      "bsonType": "string"
+    }
+  }
+}
+```
+  7. We now need to define a relationship between our two collections so that the comment document understands cakeId. So, click **Add a relationship** and set it to the following before clicking **Add:**
+    - Parent Field: **cakeId - ObjectId**    
+    - Linked Database: **Bakery**   
+    - Linked Collection: **cakes**  
+    - Linked Field: **_id**
+
+  8. At this point, we need to click **Review Draft & Deploy** at the top of the browser window, to deploy both our new schemas for our application.
+  9. Click **Deploy** in the modal that pops up.
+
+
+
+
+
 
 
 
