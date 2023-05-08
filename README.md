@@ -23,31 +23,31 @@ In this lab, you will do the following:
 ### Provision a free cluster
 Let’s deploy our first forever-free database in MongoDB Atlas! We’ll do that using the Atlas UI, so before starting, make sure you’re logged into your account.
 
-  1. Click on the **Build a Database** button.
+  1. Click on the **Build a Database** button.  
   
-img1
+  <img width="208" alt="Picture 1" src="https://user-images.githubusercontent.com/104025201/236861740-a789b728-7949-4dc3-b9e4-aaa8e31adfcf.png">
 
   2. Click on the **advanced configuration options** link.
   
-img2
+  <img width="452" alt="Picture 2" src="https://user-images.githubusercontent.com/104025201/236861807-9ad93cd3-b26a-4e41-a565-85753db3f73f.png"> 
 
-  3. Select **Shared** and click **Create**.
-  
-img3
+  3. Select **Shared** and click **Create**. 
+
+<img width="404" alt="Picture 3" src="https://user-images.githubusercontent.com/104025201/236861894-bd841ed2-f825-49ca-89f5-dd4e87e789e4.png">
 
   4. Select a cloud provider and the region closest to your physical location.
   
-img4
+<img width="404" alt="Picture 4" src="https://user-images.githubusercontent.com/104025201/236862463-fde8f4fb-8779-4144-9028-e9e0c6920d22.png">
 
   5. Expand the **Cluster Name** section and rename your cluster to **Sandbox**.
   
-img5
+<img width="452" alt="Picture 5" src="https://user-images.githubusercontent.com/104025201/236861973-3e19e17c-412b-4f3b-8e4d-3e1d950c4f4b.png">
 
   6. Click **Create Cluster** to deploy your cluster.
   
   7. To navigate back to your deployments, select **Database** from the left-hand menu.
-  
-img6
+
+<img width="452" alt="Picture 6" src="https://user-images.githubusercontent.com/104025201/236862008-53e62e6f-7f36-409e-88a7-d4efea50b1ac.png">
 
 ### Create a database and collection, and insert our first documents
 In this section, we will browse our new **Sandbox** cluster, learn how to create a new database, add a collection, and insert documents.
