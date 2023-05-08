@@ -209,8 +209,62 @@ img20
     - Linked Collection: **cakes**  
     - Linked Field: **_id**
 
-  8. At this point, we need to click **Review Draft & Deploy** at the top of the browser window, to deploy both our new schemas for our application.
+  8. At this point, we need to click **Review Draft & Deploy** at the top of the browser window, to deploy both our new schemas for our application.  
   9. Click **Deploy** in the modal that pops up.
+
+### Query data with GraphQL
+Now that we have the schemas in place, it’s time to run our first query to check it all works!
+
+  1. Click GraphQL from the left side menu, under the Build heading.
+
+img21
+
+  2. Replace the comments and sample query inside the playground with the following query, which requests the name and description from our cakes collection:
+```
+query {
+  cakes {
+    name
+    description
+  }
+}
+```
+  3. Click the play button at the top to run your query, and see your cakes document returned on the right. 
+
+img22
+
+  4. Now clear out the previous query and paste this one:
+```
+query {
+  comments {
+    _id
+    cakeId {
+      _id
+      description
+      image
+      name
+      shortDescription
+      stock
+    }
+    date
+    name
+    text
+  }
+}
+```  
+  5. Click the play button at the top to run your query, and see your comments document and it will also include the related cake’s data.
+
+img23
+
+## Congratulations!
+In this lab, you have provisioned your first MongoDB Atlas cluster, created a database, and populated a collection with data. Thanks to Atlas App Services, you also learned how to access your data through a GraphQL API.  
+
+
+
+
+
+
+
+
 
 
 
