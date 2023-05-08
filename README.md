@@ -13,9 +13,9 @@ In this lab, you will do the following:
   - Query data with the generated GraphQL API
   
  ## Prerequisites
- Since this lab is an introduction to MongoDB Atlas, you will need an Atlas account. You can register for MongoDB Atlas in one of two ways:
-    1. Through the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mongodb.mongodb_atlas_self_serve_prod_2022?ocid=mongodb_iotmanufacturing_blog_FY23) if you have an Azure account. Refer to the [documentation](https://www.mongodb.com/docs/atlas/billing/azure-self-serve-marketplace/) to set up your subscription.
-    2. With the [Atlas registration page](https://account.mongodb.com/account/register)
+ Since this lab is an introduction to MongoDB Atlas, you will need an Atlas account. You can register for MongoDB Atlas in one of two ways:  
+  1. Through the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mongodb.mongodb_atlas_self_serve_prod_2022?ocid=mongodb_iotmanufacturing_blog_FY23) if you have an Azure account. Refer to the [documentation](https://www.mongodb.com/docs/atlas/billing/azure-self-serve-marketplace/) to set up your subscription.  
+  2. With the [Atlas registration page](https://account.mongodb.com/account/register)
    
 ## Create an Atlas project and cluster
  In this section, you will get up and running, spinning up your first cluster and database.
@@ -156,7 +156,7 @@ In this section, we will set up our first Atlas App Services application, ready 
 
 <img width="424" alt="Picture 18" src="https://user-images.githubusercontent.com/104025201/236863852-e699113d-8881-4291-a6c3-b14d6835b09f.png">
 
-  4. Click the Create App Service button to create your first App Services application!
+  4. Click the **Create App Service** button to create your first App Services application!
 
 ### Configure rules  
 We want to add some rules to control our app’s access to our data. We don’t need everything to be able to read and write. So, we will configure those rules in this section.  
@@ -165,7 +165,7 @@ We want to add some rules to control our app’s access to our data. We don’t 
 <img width="123" alt="Picture 19" src="https://user-images.githubusercontent.com/104025201/236863900-c8e648b8-b93f-4979-a336-d2630464233f.png">
 
   2.  We will need to make two rules—one for each of our collections.  
-     a. Select the **cakes** collection, select the readAll preset, and then click **Add preset role.**  
+     a. Select the **cakes** collection, select the **readAll** preset, and then click **Add preset role.**  
      b. A popup will appear talking about Save and Deploy. You can just click through this and leave it as it is.  
   3. Select the **comments** collection from the left, and this time, apply the **readAndWriteAll** rule.  
   4. Since we have made changes to the app by adding these rules, we need to deploy those changes. This Review Draft & Deploy step is on by default to protect us from making changes unintentionally.  
