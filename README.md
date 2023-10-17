@@ -87,6 +87,7 @@ We will be using the Atlas UI for this section. However, all this can be done wi
       "cocoa powder"
    ],
    "stock": 25
+}
 ```
 
   7. Repeat steps 4 and 5, this time adding the following cake document.
